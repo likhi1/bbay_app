@@ -12,8 +12,8 @@ dependencies:
 
 # Flutter Package put here
   cupertino_icons: ^0.1.2
+  ### add font awsome
   font_awesome_flutter: 8.4.0
-
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Nov 03 20:27:36 ICT 2019
+#Sun Nov 03 22:51:40 ICT 2019
 4.path=lib/x86_64/libflutter.so
 13.baseType=DIRECTORY
 8.set=NATIVE_RESOURCE
