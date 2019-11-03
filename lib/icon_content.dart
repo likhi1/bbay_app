@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 const labelTextStyle = TextStyle(
-  fontSize: 18.0,
+  fontSize: 25.0,
   color: Color(0xFFFFFFFF),
+  fontFamily: 'Book_Akhanake',
 );
 
 class IconContent extends StatelessWidget {

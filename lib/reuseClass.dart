@@ -9,13 +9,14 @@ class ReuseClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //### support multi event Gesture
     return GestureDetector(
+      onTap: onPress,
       child: Container(
-        onTap: onPress,
         child: cardChild,
         margin: EdgeInsets.fromLTRB(5.0, 3.0, 5.0, 1.0),
         decoration: BoxDecoration(
-          color: useColor,
+          color: useColor, // ### use inside BoxDecoration
           borderRadius: BorderRadius.circular(10.0),
         ),
       ),

@@ -30,9 +30,13 @@ flutter:
 #    - assets/images/activity_feed.svg
 #    - assets/images/no_content.svg
   fonts:
-    - family: Signatra
+    - family: kt_smarn
       fonts:
         - asset: assets/fonts/kt_smarn.ttf
+
+    - family: Book_Akhanake
+      fonts:
+        - asset: assets/fonts/Book_Akhanake.ttf
 
 
 

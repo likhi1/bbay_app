@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reuseClass.dart';
-
-const bottomContainerHeight = 80.0;
-const inactiveClassColor = Color(0xFF95979b);
-const activeCardColor = Color(0xFF18adad);
-const bottomContainerColor = Color(0xFF12e5e5);
+import 'constants.dart';
 
 enum Gender {
   male,
@@ -20,8 +16,8 @@ class InputPage extends StatefulWidget {
 
 // 1 = male , 2 = female
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inactiveClassColor;
-  Color femaleCardColour = inactiveClassColor;
+//  Color maleCardColor = kInactiveClassColor;
+//  Color femaleCardColour = kInactiveClassColor;
 
   Gender selectedgender;
 
@@ -38,7 +34,7 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
             ],
@@ -48,7 +44,7 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
             ],
@@ -57,7 +53,7 @@ class _InputPageState extends State<InputPage> {
               child: Row(
             children: <Widget>[
               Expanded(
-                // Use WigetWarp SortCut Warp Widget GestureDetector
+                // ### Warp Widget Or Remove By Alt+ Enter
                 child: GestureDetector(
                   onTap: () {
                     //print('now onTab on Men' );
@@ -66,9 +62,14 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   child: new ReuseClass(
+                    onPress: () {
+                      setState(() {
+                        selectedgender = Gender.male;
+                      });
+                    },
                     useColor: selectedgender == Gender.male
-                        ? activeCardColor
-                        : inactiveClassColor,
+                        ? kActiveCardColor
+                        : kInactiveClassColor,
                     cardChild: new IconContent(
                         icon: FontAwesomeIcons.mars, label: 'Sex Male'),
                   ),
@@ -80,21 +81,18 @@ class _InputPageState extends State<InputPage> {
               child: Row(
             children: <Widget>[
               Expanded(
-                // Use WigetWarp SortCut Warp Widget GestureDetector
-                child: GestureDetector(
-                  onTap: () {
-                    //print('now onTab on Wemen' );
+                // ### Warp Widget Or Remove By Alt+ Enter
+                child: new ReuseClass(
+                  onPress: () {
                     setState(() {
-                      selectedgender = Gender.female;
+                      selectedgender = Gender.male;
                     });
                   },
-                  child: new ReuseClass(
-                    useColor: selectedgender == Gender.female
-                        ? activeCardColor
-                        : inactiveClassColor,
-                    cardChild: new IconContent(
-                        icon: FontAwesomeIcons.venus, label: 'Sex Female'),
-                  ),
+                  useColor: selectedgender == Gender.female
+                      ? kActiveCardColor
+                      : kInactiveClassColor,
+                  cardChild: new IconContent(
+                      icon: FontAwesomeIcons.venus, label: 'Sex Female ไทย'),
                 ),
               ),
             ],
@@ -104,22 +102,22 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
               Expanded(
                 child: new ReuseClass(
-                  useColor: activeCardColor,
+                  useColor: kActiveCardColor,
                 ),
               ),
             ],
